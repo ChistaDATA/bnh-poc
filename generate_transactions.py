@@ -243,10 +243,10 @@ if __name__ == "__main__":
     database = os.getenv('DB_NAME')
     table = os.getenv('TABLE_NAME')
 
-    min_customer_count = 1000
-    max_customer_count = 2000
-    min_account_count = 1000
-    max_account_count = 2000
+    min_customer_count = 1
+    max_customer_count = int(int(number_of_rows) * 0.15)
+    min_account_count = 1
+    max_account_count = int(int(number_of_rows) * 0.15)
 
     print(f'{datetime.now()}: Connecting to ClickHouse...')
 
